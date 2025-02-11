@@ -75,8 +75,8 @@ function App() {
                                       {/* Only column 2 (B) is treated as an image */}
                                       {colIndex === 1 && typeof cell === "string" ? (
                                           <img
-                                              src={cell}
-                                              alt={`Image ${rowIndex}`}
+                                              src={typeof cell === 'string' && cell.length > 0 ? cell : noImage}
+                                              alt={'No image'}
                                               width="100"
                                               loading="lazy"
                                           />
