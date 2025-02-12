@@ -129,7 +129,7 @@ function App() {
                       <TableBody>
                           {sheet.values.length > 1 ? (
                               sheet.values.slice(1).map((row, rowIndex) => (
-                                  <TableRow key={rowIndex}>
+                                  <TableRow key={rowIndex} sx={{ "&:hover": {backgroundColor: "#f5f5f5", cursor: "pointer"} }}>
                                       {row.map((cell, colIndex) => (
                                           <TableCell key={colIndex}>
                                               {colIndex === 1 && typeof cell === "string" ? (
